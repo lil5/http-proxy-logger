@@ -52,5 +52,5 @@ go build -o http-proxy-logger main.go
 ## Run
 
 ```sh
-http-proxy-logger --port 8888 --target=http://demo7704619.mockable.io
+http-proxy-logger --port 8001 --target=http://localhost:8000
 ```
