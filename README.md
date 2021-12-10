@@ -37,6 +37,12 @@ X-Cloud-Trace-Context: 83ac5937ae7ba8f3ef96ee941227b1b0
 }
 ```
 
+## Pre-Build Binary
+
+You will find those under [Releases](https://github.com/lil5/http-proxy-logger/releases)
+
+Download the `http-proxy-logger` binary and add it to your `/usr/local/bin/`
+
 ## Build binary
 
 ```sh
