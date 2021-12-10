@@ -1,7 +1,9 @@
 # HTTP proxy logger
+
 This is HTTP proxy which prints http requests and responses to console including http body.
 For example:
-```
+
+```log
 2021/05/05 03:50:44 ---REQUEST 3---
 
 POST /mocking/contacts HTTP/1.1
@@ -34,7 +36,15 @@ X-Cloud-Trace-Context: 83ac5937ae7ba8f3ef96ee941227b1b0
   "action": "updated"
 }
 ```
-## Build image
-`docker build -t stn1slv/http-proxy-logger .`
-## Start
-`docker run --rm -it -p 8888:8888 -e PORT=8888 -e TARGET=http://demo7704619.mockable.io stn1slv/http-proxy-logger`
+
+## Build binary
+
+```sh
+go build -o http-proxy-logger main.go
+```
+
+## Run
+
+```sh
+http-proxy-logger --port 8888 --target=http://demo7704619.mockable.io
+```

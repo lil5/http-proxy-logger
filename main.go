@@ -32,16 +32,13 @@ func main() {
 		},
 		Action: func(c *cli.Context) error {
 			port := c.Int("port")
-			target :=
-				c.String("target")
+			target := c.String("target")
 			targetURL, err := url.Parse(target)
 			if err != nil {
 				return err
 			}
 
-			Proxy(port, targetURL)
-
-			return nil
+			return Proxy(port, targetURL)
 		},
 	}
 
